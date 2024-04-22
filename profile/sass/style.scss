@@ -20,17 +20,17 @@ body {
   font-size: 14.4px;
 }
 
-.header {
-  padding-top: 10px;
-  padding-bottom: 10px;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.header__inner {
-  padding-left: 15px;
-  padding-right: 15px;
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  max-width: 960px;
 }
 
 .header__logo {
@@ -51,50 +51,99 @@ body {
 }
 
 .main-visual {
-  height: 600px;
-  background: url(../img/mainvisual-1.png) lightgray 50% / cover no-repeat;
+  img {
+    height: calc(100vh - 60px);
+    object-fit: cover;
+  }
+
+  @include mq("pc") {
+    img {
+      min-width: 1920px;
+      height: 600px;
+    }
+  }
 }
 
-.main__contents {
+main {
+  text-align: center;
 }
 
 .inner {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 .about {
+  padding-top: 73px;
+  padding-bottom: 101px;
 }
 
 .section__title {
+  display: inline-block;
+  color: #383e45;
+  font-size: 32px;
+  font-weight: 600;
+  border-bottom: 1px solid #383e45;
 }
 
 .about__contents {
+  margin-top: 58px;
 }
 
 .about__img {
+  text-align: center;
+
+  img {
+    width: 100px;
+    border-radius: 50px;
+  }
 }
 
 .about__text {
+  text-align: left;
 }
 
 .about__name {
+  color: #383e45;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 .about__description {
+  margin-top: 10px;
+  color: #383e45;
 }
 
 .bicycle {
+  padding-bottom: 101px;
 }
 
 .bicycle__contents {
+  padding-top: 57px;
 }
 
 .bicycle__item {
+  &:nth-child(n + 2) {
+    margin-top: 30px;
+  }
 }
 
 .bicycle__title {
+  margin-top: 10px;
+  color: #383e45;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .bicycle__text {
+  color: #383e45;
+  margin-top: 10px;
 }
 
-.footer__inner {
+.footer {
+  color: #383e45;
+  font-size: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
 }
