@@ -1,0 +1,100 @@
+@use "sass:map";
+
+//マップ型変数breakpointsを定義
+$breakpoints: (
+  //キー 値
+  "sp": "not screen and (min-width: 600px)",
+  "pc": "screen and (min-width: 600px)"
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォルト値はsp
+@mixin mq($breakpoint: sp) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+body {
+  font-size: 14.4px;
+}
+
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.header__inner {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  img {
+    width: 120px;
+  }
+}
+
+.header__nav {
+}
+
+.header__item {
+  display: flex;
+  gap: 30px;
+}
+
+.header__link {
+}
+
+.main-visual {
+  height: 600px;
+  background: url(../img/mainvisual-1.png) lightgray 50% / cover no-repeat;
+}
+
+.main__contents {
+}
+
+.inner {
+}
+.about {
+}
+
+.section__title {
+}
+
+.about__contents {
+}
+
+.about__img {
+}
+
+.about__text {
+}
+
+.about__name {
+}
+
+.about__description {
+}
+
+.bicycle {
+}
+
+.bicycle__contents {
+}
+
+.bicycle__item {
+}
+
+.bicycle__title {
+}
+
+.bicycle__text {
+}
+
+.footer__inner {
+}
