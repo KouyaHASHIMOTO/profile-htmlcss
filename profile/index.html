@@ -9,19 +9,23 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header__logo">
-        <img src="./img/logo.png" alt="" width="241" height="80" />
-      </h1>
-      <nav class="header__nav">
-        <ul class="header__item">
-          <li class="header__link"><a href="#about">About</a></li>
-          <li><a href="#bicycle">Bicycle</a></li>
-        </ul>
-      </nav>
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <img src="./img/logo.png" alt="" width="241" height="80" />
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__item">
+            <li class="header__link"><a href="#about">About</a></li>
+            <li><a href="#bicycle">Bicycle</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <div class="main-visual">
-      <img src="./img/mainvisual-1.png" alt="" />
-    </div>
+    <picture class="main-visual">
+      <source media="(min-width: 600px)" srcset="./img/./mainvisual-1.png" />
+      <img src="./img/mainvisual-2.png" alt="" />
+    </picture>
+
     <main>
       <div class="inner">
         <section id="about" class="about">

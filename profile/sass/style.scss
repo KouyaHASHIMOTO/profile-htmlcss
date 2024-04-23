@@ -26,11 +26,20 @@ img {
 }
 
 .header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.header__inner {
+  padding: 0 4%;
   display: flex;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  max-width: 960px;
+
+  @include mq("pc") {
+    max-width: calc(940px + 10px * 2);
+  }
 }
 
 .header__logo {
@@ -58,7 +67,6 @@ img {
 
   @include mq("pc") {
     img {
-      min-width: 1920px;
       height: 600px;
     }
   }
@@ -71,10 +79,15 @@ main {
 .inner {
   padding-right: 15px;
   padding-left: 15px;
+
+  @include mq("pc") {
+  }
 }
 .about {
   padding-top: 73px;
   padding-bottom: 101px;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .section__title {
@@ -87,6 +100,16 @@ main {
 
 .about__contents {
   margin-top: 58px;
+
+  @include mq("pc") {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 70px;
+    max-width: calc(930px + 15px * 2);
+  }
 }
 
 .about__img {
@@ -107,6 +130,10 @@ main {
   font-size: 16px;
   font-weight: 600;
   margin-top: 10px;
+
+  @include mq("pc") {
+    margin-top: 0;
+  }
 }
 
 .about__description {
@@ -115,16 +142,31 @@ main {
 }
 
 .bicycle {
+  padding-left: 4%;
+  padding-right: 4%;
   padding-bottom: 101px;
 }
 
 .bicycle__contents {
   padding-top: 57px;
+
+  @include mq("pc") {
+    display: flex;
+    gap: 20px;
+    max-width: calc(930px + 15px * 2);
+    margin: 0 auto;
+  }
 }
 
 .bicycle__item {
   &:nth-child(n + 2) {
     margin-top: 30px;
+  }
+
+  @include mq("pc") {
+    &:nth-child(n + 2) {
+      margin-top: 0;
+    }
   }
 }
 

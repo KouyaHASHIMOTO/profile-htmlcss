@@ -8,17 +8,27 @@ img {
 }
 
 .header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.header__inner {
+  padding: 0 4%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto;
-  max-width: 960px;
+}
+@media screen and (min-width: 600px) {
+  .header__inner {
+    max-width: 960px;
+  }
 }
 
 .header__logo img {
@@ -39,7 +49,6 @@ img {
 }
 @media screen and (min-width: 600px) {
   .main-visual img {
-    min-width: 1920px;
     height: 600px;
   }
 }
@@ -52,10 +61,11 @@ main {
   padding-right: 15px;
   padding-left: 15px;
 }
-
 .about {
   padding-top: 73px;
   padding-bottom: 101px;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .section__title {
@@ -68,6 +78,23 @@ main {
 
 .about__contents {
   margin-top: 58px;
+}
+@media screen and (min-width: 600px) {
+  .about__contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+    margin-top: 70px;
+    max-width: 960px;
+  }
 }
 
 .about__img {
@@ -88,6 +115,11 @@ main {
   font-weight: 600;
   margin-top: 10px;
 }
+@media screen and (min-width: 600px) {
+  .about__name {
+    margin-top: 0;
+  }
+}
 
 .about__description {
   margin-top: 10px;
@@ -95,15 +127,32 @@ main {
 }
 
 .bicycle {
+  padding-left: 4%;
+  padding-right: 4%;
   padding-bottom: 101px;
 }
 
 .bicycle__contents {
   padding-top: 57px;
 }
+@media screen and (min-width: 600px) {
+  .bicycle__contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
 
 .bicycle__item:nth-child(n+2) {
   margin-top: 30px;
+}
+@media screen and (min-width: 600px) {
+  .bicycle__item:nth-child(n+2) {
+    margin-top: 0;
+  }
 }
 
 .bicycle__title {
